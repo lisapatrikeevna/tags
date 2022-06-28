@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
-
+import Main from "./components/pages/main/Main";
+import cl from "./App.module.css"
+import Header from "./components/common/header/Header";
+import {useDispatch} from "react-redux";
+import { setMessageAC} from "./bll/app-reducer";
+import messageList from './mock/messageList.json'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch=useDispatch()
+    useEffect(()=>{
+        // dispatch(changeStartTimeTC())
+        dispatch(setMessageAC(messageList))
+    },[dispatch])
+
+    return (
+        <div className={cl.App}>
+            <Header/>
+            <Main/>
+        </div>
+    );
 }
 
 export default App;

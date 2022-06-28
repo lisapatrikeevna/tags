@@ -1,0 +1,32 @@
+[
+  {
+    "id": "msj1",
+    "title": "Add Timesheet",
+    "text": "Contractor submits timesheet or uploads preassigned timesheet",
+    "tags": "#Contractor ,#uploads ,#timesheet"
+  },
+  {
+    "id":  "msj2",
+    "title": "Timesheet submitted",
+    "text": "ITG Admin and Accounts nonfiction when timesheets are submitted",
+    "tags": "#ITG, #Admin ,#Accounts "
+  },
+  {
+    "id":  "msj3",
+    "title": "approve timesheet",
+    "text": "Employer/reporting manager is notified to approve timesheet",
+    "tags": "#Employer/reporting manager, #timesheet"
+  },
+  {
+    "id":  "msj4",
+    "title": "generate an invoice ",
+    "text": "Once timesheets approved, ITG and account is notified to generate an invoice",
+    "tags": "#Once, #timesheets approved, #ITG ,#invoice"
+  },
+  {
+    "id":  "msj5",
+    "title": "sent to client/employer",
+    "text": "Invoice generated based on approved timesheet and sent to client/employer",
+    "tags": "#Invoice, #timesheet ,#timesheet"
+  }
+]
