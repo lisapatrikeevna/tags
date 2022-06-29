@@ -1,13 +1,11 @@
-import React, {useState, useTransition} from 'react';
+import React, {useState} from 'react';
 import {Box, Button, TextField} from "@mui/material";
 import MessageItems, {messageType} from "./message/Message";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {StoreType} from "../../../bll/store";
 
 
 const Main = () => {
-    const [startTransition]=useTransition()
-    const dispatch=useDispatch()
     const messageList = useSelector<StoreType, Array<any>>(state => state.appReducer.messageList)
     const [text, setText] = useState('')
     const filter= useSelector<StoreType,string>(state => state.appReducer.filter)

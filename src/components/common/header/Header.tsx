@@ -2,7 +2,6 @@ import React, {ChangeEvent, useState} from 'react';
 import TagRoundedIcon from '@mui/icons-material/TagRounded';
 import cl from "./Header.module.css"
 import {Box, Container, Modal, Paper, Typography} from "@mui/material";
-import {messageType} from "../../pages/main/message/Message";
 import {useDispatch, useSelector} from "react-redux";
 import {setFilterValueAC} from '../../../bll/app-reducer';
 import {StoreType} from "../../../bll/store";
@@ -24,9 +23,9 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     const filter = useSelector<StoreType, string>(state => state.appReducer.filter)
     const dispatch = useDispatch()
-    const candlerFilter = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch(setFilterValueAC(e.currentTarget.value))
-    }
+    const candlerFilter = (e: ChangeEvent<HTMLInputElement>) => dispatch(setFilterValueAC(e.currentTarget.value))
+
+
     return (
         <div className={cl.header}>
             <Container maxWidth="lg">

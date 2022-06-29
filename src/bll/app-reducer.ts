@@ -1,5 +1,4 @@
 import {messageType} from "../components/pages/main/message/Message";
-import messageList from './../mock/messageList.json'
 
 type actionType = setMessageACType| setFilterValueACType| removePostACType
 | changeTagACType
